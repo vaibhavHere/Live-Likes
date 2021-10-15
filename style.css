@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+background-image: linear-gradient(rgb(167, 220, 236),rgb(142, 255, 189));
+min-height: 100vh;
+}
+
+.overflow,.container{
+    height: 100vh;
+    display: grid;
+    text-align: center;
+    place-items: center;
+}
+
+.overflow{
+    position:absolute;
+    width: 100vw;
+    background-color: rgba(128, 128, 128, 0.349);
+}
+
+.hide{
+    opacity: 0;
+    transition: 0.5s;
+    animation: displayblock 0s 0.7s forwards;
+}
+
+@keyframes displayblock {
+    to{
+height: 0;
+    }
+}
+
+h1,h3,button{
+    margin: 1rem;
+    padding: 1rem;
+    font-weight: 500;
+}
+
+h3{
+    font-size: 1.5rem;
+    color: rgb(66, 66, 66);
+}
+
+button{
+    font-size: 1rem;
+    background-color: rgb(255, 170, 11);
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover,button:active{
+    cursor: pointer;
+    background-color: rgb(228, 152, 13);
+}
+
+.load{
+    height: calc(4vh + 4vw);
+    width:calc(4vh + 4vw);
+    border-radius: 50%;
+    border:10px solid rgba(0, 0, 0, 0.096);
+    border-top:10px solid rgb(61, 61,61);
+    animation: rotate 0.5s linear infinite;
+    position: absolute;
+}
+
+#like{
+    font-weight: 600;
+    color:black;
+}
+
+@keyframes rotate {
+from{
+transform: rotate(0deg);
+}   
+to{
+    transform: rotate(360deg);
+} 
+}
+
+@media screen and (max-width:768px) {
+    button:hover{
+        background-color: rgb(255, 170, 11);
+    }
+}
